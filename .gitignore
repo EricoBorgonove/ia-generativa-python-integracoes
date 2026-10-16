@@ -45,3 +45,12 @@ dist/
 *.sqlite3-journal
 *.sqlite3-wal
 *.sqlite3-shm
+
+# Logs e arquivos temporarios
+*.log
+*.tmp
+*.temp
+*.bak
+*.swp
+*.swo
+*~
