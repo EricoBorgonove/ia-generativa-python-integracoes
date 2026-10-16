@@ -3,3 +3,12 @@
 venv/
 env/
 ENV/
+
+# Bytecode e caches Python
+__pycache__/
+*.py[cod]
+.pytest_cache/
+.mypy_cache/
+.ruff_cache/
+.cache/
+.ipynb_checkpoints/
