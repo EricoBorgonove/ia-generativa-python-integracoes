@@ -18,3 +18,9 @@ __pycache__/
 .coverage.*
 htmlcov/
 coverage.xml
+
+# Pacotes e artefatos de build
+build/
+dist/
+*.egg-info/
+.eggs/
