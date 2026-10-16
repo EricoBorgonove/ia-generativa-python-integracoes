@@ -40,3 +40,17 @@ $env:OLLAMA_HOST = "http://localhost:11434"
 ```
 
 O projeto não carrega arquivos `.env` automaticamente.
+
+## Banco de atendimentos
+
+Para criar a tabela e inserir oito atendimentos demonstrativos em um banco vazio:
+
+```powershell
+.\.venv\Scripts\python.exe v08_criar_banco.py
+```
+
+O banco fica em `data/atendimentos.db`. O script preserva registros existentes
+quando a tabela já contém dados. O serviço de consultas também cria a tabela
+quando necessário, mas não insere os exemplos automaticamente.
+
+Os arquivos SQLite e seus auxiliares são ignorados pelo Git e permanecem locais.
