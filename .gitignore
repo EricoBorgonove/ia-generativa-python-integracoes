@@ -54,3 +54,7 @@ dist/
 *.swp
 *.swo
 *~
+
+# Configuracoes locais de editores
+.idea/
+.vscode/
