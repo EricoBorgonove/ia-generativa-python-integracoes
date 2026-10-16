@@ -24,3 +24,10 @@ build/
 dist/
 *.egg-info/
 .eggs/
+
+# Variaveis de ambiente e segredos locais
+.env
+.env.*
+!.env.example
+!.env.sample
+.streamlit/secrets.toml
