@@ -81,3 +81,24 @@ Para usar o chat de terminal:
 
 Digite `sair` para encerrar. Consultas meteorológicas precisam de acesso à internet;
 a geração de respostas depende do serviço e do modelo Ollama disponíveis.
+
+## Organização e limites
+
+- `app.py`: interface Streamlit e histórico da conversa na sessão.
+- `config.py`: configuração do endereço e modelo Ollama.
+- `core/assistant.py`: coordenação das fontes e respostas.
+- `core/source_router.py`: seleção de fontes por palavras-chave.
+- `services/`: geocodificação, clima, atendimentos, modelo e ponto de integração RAG.
+- `database/`: conexão SQLite e criação da tabela.
+- `v01_*.py` a `v13_*.py`: exemplos progressivos e roteiros de consulta manual.
+
+A opção Documentos (RAG) exige implementar `consultar_documentos` em
+`services/rag_service.py`. Atualmente ela lança `RAGNotConfiguredError`;
+a recuperação documental ainda não está conectada.
+
+Os scripts com `teste` no nome são roteiros manuais e podem consultar serviços
+externos ou depender do banco preparado. Eles não constituem uma suíte automatizada.
+
+O `.gitignore` exclui ambientes virtuais, caches, bancos locais, segredos,
+relatórios de cobertura, artefatos de build, logs e arquivos locais de editores.
+Os exemplos `.env.example` e `.env.sample` podem ser versionados.
