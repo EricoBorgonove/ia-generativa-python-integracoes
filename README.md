@@ -54,3 +54,30 @@ quando a tabela já contém dados. O serviço de consultas também cria a tabela
 quando necessário, mas não insere os exemplos automaticamente.
 
 Os arquivos SQLite e seus auxiliares são ignorados pelo Git e permanecem locais.
+
+## Execução
+
+Para abrir a interface:
+
+```powershell
+.\.venv\Scripts\python.exe -m streamlit run app.py
+```
+
+Selecione a fonte de informação e, para clima, uma cidade na barra lateral
+ou informe Manaus, Belém ou Curitiba na pergunta. Exemplos:
+
+- Como está o clima em Manaus?
+- Quantos atendimentos estão pendentes?
+- Qual é a previsão para Curitiba e quantos chamados estão pendentes?
+
+No modo automático, o roteador identifica clima e atendimentos por palavras-chave;
+perguntas sem essas palavras seguem para conhecimento geral do modelo.
+
+Para usar o chat de terminal:
+
+```powershell
+.\.venv\Scripts\python.exe v13_chat_integrado.py
+```
+
+Digite `sair` para encerrar. Consultas meteorológicas precisam de acesso à internet;
+a geração de respostas depende do serviço e do modelo Ollama disponíveis.
