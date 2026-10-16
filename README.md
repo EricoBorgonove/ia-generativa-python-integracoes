@@ -18,3 +18,25 @@ python -m venv .venv
 ```
 
 Os comandos usam diretamente o Python do ambiente e dispensam sua ativação.
+
+## Modelo local
+
+Com o Ollama instalado, obtenha o modelo padrão:
+
+```powershell
+ollama pull llama3.1:8b
+```
+
+Mantenha o serviço Ollama ativo. Se ele não estiver em execução, inicie-o com
+`ollama serve` em outro terminal.
+
+`config.py` lê as variáveis de ambiente `OLLAMA_MODEL` e `OLLAMA_HOST`.
+Os padrões são `llama3.1:8b` e `http://localhost:11434`.
+Para alterá-los na sessão atual do PowerShell:
+
+```powershell
+$env:OLLAMA_MODEL = "llama3.1:8b"
+$env:OLLAMA_HOST = "http://localhost:11434"
+```
+
+O projeto não carrega arquivos `.env` automaticamente.
