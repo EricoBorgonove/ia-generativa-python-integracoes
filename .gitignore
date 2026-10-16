@@ -58,3 +58,10 @@ dist/
 # Configuracoes locais de editores
 .idea/
 .vscode/
+
+# Arquivos do sistema operacional
+.DS_Store
+._*
+Thumbs.db
+Desktop.ini
+$RECYCLE.BIN/
