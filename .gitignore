@@ -12,3 +12,9 @@ __pycache__/
 .ruff_cache/
 .cache/
 .ipynb_checkpoints/
+
+# Cobertura de testes
+.coverage
+.coverage.*
+htmlcov/
+coverage.xml
